@@ -1,0 +1,10 @@
+*.dropbox
+*.otf
+*.DS_Store
+PHPTest/
+carouFredSel-6.2.1/
+css/reset.min.css
+js/jquery.carouFredSel-6.2.1-packed.js
+php/class/phpmailer/
+font/
+img/

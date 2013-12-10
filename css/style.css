@@ -1,0 +1,528 @@
+html {
+	width: 100%;
+}
+
+body {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	/*max-height: 100%;*/
+	position: relative;
+	margin: 0 auto;
+	background-color: rgb(21, 52, 80);
+
+}
+
+
+.navFont {
+	font-family: Bebas-Neue;
+}
+
+.headerItem {
+	display: inline-block;
+}
+
+#blueBG {
+	background-color: rgb(21, 52, 80);
+	width: 1200px;
+	/*min-height: 100%;
+	height: auto !important;*/
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#yellowBG {
+	background-color: rgb(189, 173, 83);
+	width: 100%;
+	height: 20px;
+}
+
+#blackBG {
+	background-color: rgb(1, 6, 22);
+	width: 100%;
+	height: 75px;
+}
+
+#gradient {
+	height: 200px;
+	width: 500px;
+	position: absolute;
+	z-index: -5;
+}
+
+#header {
+	height: 72px;
+	width: 1200px;
+}
+
+#headerBox {
+	height: 100%;
+	width: 100%;
+}
+
+#title {
+	color: white;
+	font-size: 99px;
+	height: 100%;
+	width: 700px;
+	margin: 0;
+	position: absolute;
+	top: 33px;
+	left: 24px;
+}
+
+/*#titleContainer {
+	position: absolute;
+}*/
+
+#teamNumber {
+	color: rgb(100, 182, 244);
+	font-size: 39px;
+	line-height: 41px;
+	width: 127px;
+	height: 72px;
+	position: absolute;
+	left: 754px;
+	top: 39px;
+}
+
+#firstLogo {
+	position: absolute;
+	left: 899px;
+	top: 39px;
+}
+
+#queequeg {
+	position: relative;
+	left: 692px;
+	bottom: 54px;
+	z-index: 0;
+}
+
+#gallery {
+	width: 853px;
+	height: 300px;
+	border: 2px solid rgb(4, 34, 41);
+	background-color: gray;
+	position: relative;
+	bottom: 439px;
+	left: 25px;
+}
+
+#navbar {
+	width: 1150px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: rgb(244, 233, 163);
+	position: relative;
+	bottom: 411px;
+}
+
+#bodyContainer {
+	margin: 0 auto;
+}
+
+li.navLink {
+	list-style: none;
+	display: inline-block;
+	color: rgb(4, 59, 40);
+	font-size: 37px;
+	position: relative;
+	text-align: center;
+
+}
+li.navLink a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:visited {
+	color: rgb(100, 182, 244);
+}
+
+#aboutLink {
+	left: 30px;
+}
+
+#resourcesLink {
+	left: 60px;
+}
+
+#mediaLink {
+	left: 90px;
+}
+
+#blogLink {
+	left: 120px;
+}
+
+#firstLink {
+	left: 160px;
+}
+
+#outreachLink {
+	left: 190px;
+}
+
+#sponsorLink {
+	left: 220px;
+}
+
+#contactLink {
+	left: 250px;
+}
+
+#navbar nav {
+	position: absolute;
+	bottom: 3px;
+	right: 266px;
+}
+
+#content {
+	background-color: white;
+	width: 910px;
+	position: relative;
+	left: 25px;
+	bottom: 392px;
+	float: left;
+	/*display: flex;
+		display: -webkit-flex;
+		display: -moz-flex;
+	height: fit-content;
+		height: -webkit-fit-content;
+	flex-direction: column;
+		-webkit-flex-direction: column;*/
+	font-family: 'Noto Sans', sans-serif;
+
+}
+
+	#contentContainer {
+		padding: 15px 35px;
+		font-size: 16px;
+		line-height: 1.25;
+	}
+
+	#content h2 {
+		margin: 15px 0 0 35px;
+		font-size: 30px;
+	}
+
+#depts {
+	width: 230px;
+	height: 500px;
+	position: relative;
+	right: 25px;
+	bottom: 384px;
+	float: right;
+}
+
+.department {
+	height: 60px;
+	width: 230px;
+	border: 1px solid rgb(100, 182, 244);
+	position: relative;
+	background-color: rgb(0, 50, 97);
+	color: rgb(100, 182, 244);
+	display: block;
+}
+
+	.department:link {
+		text-decoration: none;
+	}
+
+#fabrication {
+
+}
+
+#programming {
+	top: 35px;
+}
+
+#am {
+	top:70px;
+}
+
+#electronics {
+	top: 105px;
+}
+
+#video {
+	top: 140px;
+}
+
+#website {
+	top: 175px;
+}
+
+.deptPic {
+	border: 1px solid rgb(100, 182, 244);
+	width: 82px;
+	height: 62px;
+	position: relative;
+	bottom: 9px;
+	left: 2px;
+}
+
+#fabricationPic {
+	background-image: url('../img/fabrication.png');
+}
+
+#programmingPic {
+	background-image: url('../img/programming.png');
+}
+
+#amPic {
+	background-image: url('../img/aesthetics.png');
+	display: inline-block;
+}
+
+#electronicsPic {
+	background-image: url('../img/electronics.png');
+}
+
+#videoPic {
+	background-image: url('../img/video.png');
+}
+
+#websitePic {
+	background-image: url('../img/website.png');
+}
+
+.department div.deptTxt {
+	position: relative;
+	left: 91px;
+	bottom: 63px;
+	font-size: 30px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	width: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+}
+
+#am div.deptTxt {
+	line-height: 90%;
+	width: 134px;
+	height: 70px;
+	z-index: 99;
+	/*left: 5px !important;
+	bottom: 8px !important;
+	overflow: visible;
+	font-size:;*/
+}
+
+#footer {
+	width: 100%;
+	height: 95px;
+	clear: both;
+	/*position: absolute;
+	bottom: 0px;*/
+}
+
+#iconContainer {
+	float: right;
+	position: relative;
+	top: 8px;
+	right: 6px;
+}
+
+	#iconContainer a {
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+	}
+	
+@font-face {
+	font-family: Bebas-Neue;
+	src: url('../font/bebasneue.eot');
+    src: url('../font/bebasneue.eot?#iefix') format('embedded-opentype'),
+         url('../font/bebasneue.woff') format('woff'),
+         url('../font/bebasneue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: Noasarck;
+	src: url('../font/noasarck.eot');
+    src: url('../font/noasarck.eot?#iefix') format('embedded-opentype'),
+         url('../font/noasarck.woff') format('woff'),
+         url('../font/noasarck.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: Gnuolane;
+	src: url('../font/Gnuolane.otf');
+}
+/*==========================================Nav Styles=======================================================*/
+
+#navbar {
+	/*position: static;*/
+	font-family: Noasarck;
+	text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+
+nav ul ul {
+	display: none;
+	width: 100%;
+	padding: 0;
+	z-index: 99;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul {
+	display: inline-table;
+	position: relative;
+}
+
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	display: block;
+}
+
+nav ul ul {
+	position: absolute;
+	top: 100%;
+	background-color: rgb(244, 233, 163);
+}
+nav ul ul li {
+	float: none;
+	position: relative;
+}
+
+nav ul ul li a {
+	text-align: left;
+	font-size: 30px;
+	text-indent: 5px;
+}
+
+nav ul ul li a:hover {
+	/*background-color: red;*/
+}
+
+li li {
+	width: 100%;
+}
+
+nav > ul > li {
+	margin-left: 5px;
+	font-size: 38px !important;
+}
+
+#homeLink {
+	margin: 0;
+}
+
+#aboutLink ul {
+	width: 145px;
+}
+
+#aboutLink ul li {
+	height: 50%;
+}
+
+#aboutLink ul li a {
+	height: 100%;
+}
+
+#resourcesLink ul {
+	width: 191px;
+}
+
+#mediaLink ul {
+	width: 175px;
+}
+
+#sponsorLink ul {
+	width: 190px;
+}
+
+/*==========================================Gallery Styles============================================*/
+#gallery div {
+	
+}
+
+#carousel {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#carousel li {
+	width: 427px;
+	height: 300px;
+	float: left;
+}
+
+#carousel img {
+	width: 100%;
+	height: 100%;
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+#leftArrow, #rightArrow {
+	width: 53px;
+	height: 53px;
+	z-index: 99;
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+}
+	
+	#leftArrow {
+		top: 133px;
+		left: 5px;
+	}
+
+	#rightArrow {
+		left: 796px;
+		bottom: 114px;
+	}
+
+/*content styles*/
+
+#contentContainer p:not(:first-child) {
+	margin-top: 10px;
+}
+
+#contentContainer p+div {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#contentContainer h3 {
+	margin: 10px 0;
+}
+
+#contentContainer ul {
+	margin: 10px 0 0 20px;
+}
+
+	#contentContainer li:not(:first-child) {
+		margin-top: 5px;
+	}
+
+#contentContainer a:link {
+	color: rgb(100, 182, 244);
+}

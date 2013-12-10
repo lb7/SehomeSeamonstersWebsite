@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sehome Seamonsters</title>
+		<meta charset='UTF-8'>
+		<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+		<script type="text/javascript" src='./js/jquery.carouFredSel-6.2.1-packed.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#gallery').carouFredSel({
+					items: 2,
+					
+				});
+			});	
+		</script>
+		<style type="text/css">
+			#galleryContainer {
+				width: 500px;
+				height: 100px;
+				background-color: fuchsia;
+			}
+
+			#gallery {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				background-color: blue;
+			}
+
+			#gallery li {
+				background-color: yellow;
+				width: 50px;
+				height: 50px;
+				display: block;
+				float: left;
+			}
+
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='galleryContainer'>
+			<ul id='gallery'>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<div class='clearfix'></div>
+		</div>
+	</body>
+</html>
