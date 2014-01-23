@@ -29,7 +29,7 @@ $(document).ready(function() {
 					$('#result').text(data);
 				},
 				error: function (jqXHR, status, error) {
-					$('result').text('The request could not be completed for some reason. Please try again soon.')
+					$('#result').text('The request could not be completed for some reason. Please try again soon.');
 				}
 			});
 			$('#result').text('Processing...'); //gets replaced once the request has finished
