@@ -20,6 +20,65 @@
 		  ga('send', 'pageview');
 
 		</script>
+		<?php 
+				
+				include 'php/class/simple_html_dom.php';
+
+				$url = "http://www2.usfirst.org/2014comp/events/waell/rankings.html";
+				$html = file_get_html($url);
+
+				$tables = $html->find('table');
+				$trs = $tables[2]->find('tr');
+
+				$rank = 'false';
+
+				foreach ($trs as $key => $value) {
+					if(@$trs[$key]->children(1)->innertext == '2605') {
+						$rank = $trs[$key]->children(0)->innertext;
+					}
+				}	
+				
+		?>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var echo = '<?php echo($rank); ?>';
+				var suffix;
+
+				if(echo != 'false') {
+					switch(echo) {
+						case '1':
+							suffix = 'st';
+							break;
+						case '2':
+						case '22':
+						case '32':
+							suffix = 'nd';
+							break;
+						case '3':
+						case '23':
+						case '33':
+							suffix = 'rd';
+							break;
+						default:
+							suffix = 'th';
+							break;
+					}
+
+					$('#suffix').html(suffix);
+					$("#rank").html(echo);
+				} else {
+					$('#comp p:nth-child(1)').html("Statistics for the Ellensburg district event are currently unavailable. Please check back later today.")
+				}
+			});
+			
+		</script>
+		<style type="text/css">
+			#comp {
+				height: 75px;
+				margin-bottom: 25px;
+				font-size: 20px;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -88,18 +147,29 @@
 			</div>
 			<div id='content' class='navFont'>
 				<!--Content div-->
-				<h2>Weekly Videos</h2>
+				<h2>Sehome Seamonsters</h2>
 				<div id='contentContainer'>
 					<!--Content Here-->
-					<p><b>2014 Weekly Videos</p></b>
-					<p>Week 6 Video</p>
-					<iframe width="560" height="315" src="//www.youtube.com/embed/o3UG5sAZHns" frameborder="0" allowfullscreen></iframe>
-					<p>Week 5 Video</p>
-					<p><object width="560" height="315"><param name="movie" value="//www.youtube.com/v/uGNU7D41eDQ?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/uGNU7D41eDQ?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-					<p>Week 4 Video</p>
-					<p><object width="560" height="315"><param name="movie" value="//www.youtube.com/v/sPR3MyVIocI?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/sPR3MyVIocI?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-					<p>Weeks 1-3 Video</p>
-					<p><object width="560" height="315"><param name="movie" value="//www.youtube.com/v/WwzUkkIbYAU?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/WwzUkkIbYAU?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+					<div id='comp'>
+						<p>We are currently in <span id='rank'></span><span id='suffix'></span> place at the Ellensburg District Competition!</p>
+						<p>Come check out <a href="http://www.sehomeseamonsters.org/blog" target="_blank">our blog</a> for detailed updates.</p>
+					</div>
+
+					<p>We are FIRST Robotics Team 2605, the Sehome Seamonsters! We work out of the Robotics Room provided to us by Sehome High School in Bellingham, Washington. </p>
+					<p>If you’re not already familiar with FIRST Robotics, it’s probably a good idea to head over to our FIRST Information page.</p>
+					<p><strong>Our Team at a Glance...</strong></p>
+					<p><strong>Full Team Name:</strong> The Sehome Seamonsters Robotics Team</p>
+					<p><strong>Official Team Sponsors:</strong> NASA, Bellingham School District, Platt Electric, Lund Engineering, OSPI &amp; Sehome High School</p>
+					<p><strong>Team Number:</strong> 2605</p>
+					<p><strong>Location:</strong> Sehome High School, Bellingham, WA</p>
+					<p><strong>Established:</strong> 2008</p>
+					<p><strong>Mascot Name:</strong> Queequeg</p>
+					<p><strong>Team Colors:</strong> Green, Black, Gold</p>
+					<p><strong>Competes at:</strong> Seattle, Ellensburg, Portland</p>
+
+					<h3 id='calHead'>Team Schedule</h3>
+					<iframe src="https://www.google.com/calendar/embed?title=%20&amp;showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=l71v44emfs15htt721fbd51esk%40group.calendar.google.com&amp;color=%235229A3&amp;src=qtps7o6ar5gme79lulcdb8dar0%40group.calendar.google.com&amp;color=%23B1365F&amp;src=fi9vr0ntlim52pq0vibj7uik4g%40group.calendar.google.com&amp;color=%23182C57&amp;src=5bnqgh75g3m79388chvvived1g%40group.calendar.google.com&amp;color=%232F6309&amp;src=hk9oee2l74babmt3cvdkl97r68%40group.calendar.google.com&amp;color=%23875509&amp;src=sehomeseamonsters%40yahoo.com&amp;color=%232952A3&amp;src=dtbj3j1g4gq3t87bn7netiirug%40group.calendar.google.com&amp;color=%236B3304&amp;src=7cbl0rne811cfi6kd4fi3g5ab8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+					<p>For all of our scouters in the stands, the database can be accessed <a href="https://mcgrecon-457d2f6826a852.sharepoint.com/Ellensburg%20Scouting%20Application/default.aspx#Tile=Ellensburg&View=Ellensburg%20List">here</a>.</p>
 				</div>
 			</div>
 			<div class='navFont' id='depts'>

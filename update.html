@@ -10,6 +10,7 @@
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 		<script type="text/javascript" src='./js/jquery.carouFredSel-6.2.1-packed.js'></script>
 		<script type="text/javascript" src='./js/gallery.js'></script>
+		<script type="text/javascript" src='./js/update.js'></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,6 +21,81 @@
 		  ga('send', 'pageview');
 
 		</script>
+		<style type="text/css">
+			#wishlist li {
+				list-style-type: none;
+				width: 820px;
+			}
+
+			.liContainer {
+				display: inline-block;
+				width: 790px;
+			}
+
+			li div {
+				display: inline-block;
+			}
+
+			#headerContainer {
+				display: none;
+				margin-top: 10px;	
+				margin-left: 47px;		
+				font-weight: bold;
+				width: 790px;	
+			}
+				#headerContainer div {
+					display: inline-block;
+					margin: 0;
+				}
+
+				#headerContainer div:nth-child(1) {
+					width: 20%;
+				}
+
+				#headerContainer div:nth-child(2) {
+					width: 20%;
+				}
+
+				#headerContainer div:nth-child(3) {
+					width: 45%;
+				}
+
+				#headerContainer div:nth-child(4) {
+					width: 10%;
+				}
+
+			.checkbox {
+				margin-right: 10px;
+			}
+
+			.item {
+				width: 20%;
+			}
+
+			.where {
+				width: 20%;
+			}
+
+			.description {
+				width: 45%;
+			}
+
+			.price {
+				width: 10%;
+			}
+
+			.liContainer > div {
+				word-wrap: break-word;
+			}
+
+			ul > li:nth-child(odd) > .liContainer {
+				background-color: #C4C4C4;
+			}
+
+			#statusText {
+				
+			}
+		</style>
 	</head>
 
 	<body>
@@ -49,7 +125,7 @@
 					<ul>
 						<li class='navLink' id='homeLink'><a href='index.html'>Home</a>
 						</li>
-						<li class='navLink' id='aboutLink'><a href='#'>About</a>
+						<li class='navLink' id='aboutLink'><a href='about.html'>About</a>
 							<ul>
 								<li class='navLink'><a href="profiles.html">Team Profiles</a></li>
 								<li class='navLink'><a href="history.html">History</a></li>
@@ -88,23 +164,23 @@
 			</div>
 			<div id='content' class='navFont'>
 				<!--Content div-->
-				<h2>Sehome Seamonsters</h2>
+				<h2>Content Updater</h2>
 				<div id='contentContainer'>
 					<!--Content Here-->
-					<p>We are FIRST Robotics Team 2605, the Sehome Seamonsters! We work out of the Robotics Room provided to us by Sehome High School in Bellingham, Washington. </p>
-					<p>If you’re not already familiar with FIRST Robotics, it’s probably a good idea to head over to our FIRST Information page.</p>
-					<p><strong>Our Team at a Glance...</strong></p>
-					<p><strong>Full Team Name:</strong> The Sehome Seamonsters Robotics Team</p>
-					<p><strong>Official Team Sponsors:</strong> NASA, Bellingham School District, Platt Electric, Lund Engineering, OSPI &amp; Sehome High School</p>
-					<p><strong>Team Number:</strong> 2605</p>
-					<p><strong>Location:</strong> Sehome High School, Bellingham, WA</p>
-					<p><strong>Established:</strong> 2008</p>
-					<p><strong>Mascot Name:</strong> Queequeg</p>
-					<p><strong>Team Colors:</strong> Green, Black, Gold</p>
-					<p><strong>Competes at:</strong> Seattle, Ellensburg, Portland</p>
-
-					<h3 id='calHead'>Team Schedule</h3>
-					<iframe src="https://www.google.com/calendar/embed?title=%20&amp;showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=l71v44emfs15htt721fbd51esk%40group.calendar.google.com&amp;color=%235229A3&amp;src=qtps7o6ar5gme79lulcdb8dar0%40group.calendar.google.com&amp;color=%23B1365F&amp;src=fi9vr0ntlim52pq0vibj7uik4g%40group.calendar.google.com&amp;color=%23182C57&amp;src=5bnqgh75g3m79388chvvived1g%40group.calendar.google.com&amp;color=%232F6309&amp;src=hk9oee2l74babmt3cvdkl97r68%40group.calendar.google.com&amp;color=%23875509&amp;src=sehomeseamonsters%40yahoo.com&amp;color=%232952A3&amp;src=dtbj3j1g4gq3t87bn7netiirug%40group.calendar.google.com&amp;color=%236B3304&amp;src=7cbl0rne811cfi6kd4fi3g5ab8%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+					<form id='updateForm'>
+						<label for='password'>Password Required: </label><input id='password' name='password' type='password'>
+						<input id='selector' name='type' type='hidden' value='password'>
+						<input id='submitPass' type='submit' value='Submit'>
+					</form>
+					<div id='statusText'></div>
+					<div id='wishlist'>
+						<div id='headerContainer'>
+							<div>Item Name</div><div>Where To Buy</div><div>Description</div><div>Price</div>
+						</div>
+						<ul>
+							
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class='navFont' id='depts'>

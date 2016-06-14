@@ -10,6 +10,7 @@
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 		<script type="text/javascript" src='./js/jquery.carouFredSel-6.2.1-packed.js'></script>
 		<script type="text/javascript" src='./js/gallery.js'></script>
+		<script type="text/javascript" src='./js/wishlist.js'></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,8 +19,83 @@
 
 		  ga('create', 'UA-38122373-2', 'sehomeseamonsters.org');
 		  ga('send', 'pageview');
-
 		</script>
+		<style type="text/css">
+			#wishlist li {
+				list-style-type: none;
+				width: 820px;
+				margin-left: 27px;
+			}
+
+			.liContainer {
+				display: inline-block;
+				width: 790px;
+			}
+
+			li div {
+				display: inline-block;
+			}
+
+			#headerContainer {
+				
+				margin-top: 10px;	
+				margin-left: 47px;		
+				font-weight: bold;
+				width: 790px;	
+			}
+				#headerContainer div {
+					display: inline-block;
+					margin: 0;
+				}
+
+				#headerContainer div:nth-child(1) {
+					width: 20%;
+				}
+
+				#headerContainer div:nth-child(2) {
+					width: 20%;
+				}
+
+				#headerContainer div:nth-child(3) {
+					width: 50%;
+				}
+
+				#headerContainer div:nth-child(4) {
+					width: 5%;
+				}
+
+			.checkbox {
+				margin-right: 10px;
+			}
+
+			.item {
+				width: 20%;
+			}
+
+			.where {
+				width: 20%;
+			}
+
+			.description {
+				width: 50%;
+			}
+
+			.price {
+				width: 5%;
+			}
+
+			.liContainer > div {
+				word-wrap: break-word;
+			}
+
+			ul > li:nth-child(odd) > .liContainer {
+				background-color: #C4C4C4;
+			}
+
+			#statusText {
+				
+			}
+		</style>
 	</head>
 
 	<body>
@@ -49,7 +125,7 @@
 					<ul>
 						<li class='navLink' id='homeLink'><a href='index.html'>Home</a>
 						</li>
-						<li class='navLink' id='aboutLink'><a href='#'>About</a>
+						<li class='navLink' id='aboutLink'><a href='about.html'>About</a>
 							<ul>
 								<li class='navLink'><a href="profiles.html">Team Profiles</a></li>
 								<li class='navLink'><a href="history.html">History</a></li>
@@ -88,18 +164,17 @@
 			</div>
 			<div id='content' class='navFont'>
 				<!--Content div-->
-				<h2>Weekly Videos</h2>
+				<h2>Wishlist</h2>
 				<div id='contentContainer'>
 					<!--Content Here-->
-					<p><b>2014 Weekly Videos</p></b>
-					<p>Week 6 Video</p>
-					<iframe width="560" height="315" src="//www.youtube.com/embed/o3UG5sAZHns" frameborder="0" allowfullscreen></iframe>
-					<p>Week 5 Video</p>
-					<p><object width="560" height="315"><param name="movie" value="//www.youtube.com/v/uGNU7D41eDQ?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/uGNU7D41eDQ?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-					<p>Week 4 Video</p>
-					<p><object width="560" height="315"><param name="movie" value="//www.youtube.com/v/sPR3MyVIocI?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/sPR3MyVIocI?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-					<p>Weeks 1-3 Video</p>
-					<p><object width="560" height="315"><param name="movie" value="//www.youtube.com/v/WwzUkkIbYAU?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/WwzUkkIbYAU?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+					<div id='wishlist'>
+						<div id='headerContainer'>
+							<div>Item Name</div><div>Where To Buy</div><div>Description</div><div>Price</div>
+						</div>
+						<ul>
+							
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class='navFont' id='depts'>
