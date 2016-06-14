@@ -20,58 +20,6 @@
 		  ga('send', 'pageview');
 
 		</script>
-		<?php 
-				
-				include 'php/class/simple_html_dom.php';
-
-				$url = "http://www2.usfirst.org/2014comp/events/waell/rankings.html";
-				$html = file_get_html($url);
-
-				$tables = $html->find('table');
-				$trs = $tables[2]->find('tr');
-
-				$rank = 'false';
-
-				foreach ($trs as $key => $value) {
-					if(@$trs[$key]->children(1)->innertext == '2605') {
-						$rank = $trs[$key]->children(0)->innertext;
-					}
-				}	
-				
-		?>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				var echo = '<?php echo($rank); ?>';
-				var suffix;
-
-				if(echo != 'false') {
-					switch(echo) {
-						case '1':
-							suffix = 'st';
-							break;
-						case '2':
-						case '22':
-						case '32':
-							suffix = 'nd';
-							break;
-						case '3':
-						case '23':
-						case '33':
-							suffix = 'rd';
-							break;
-						default:
-							suffix = 'th';
-							break;
-					}
-
-					$('#suffix').html(suffix);
-					$("#rank").html(echo);
-				} else {
-					$('#comp p:nth-child(1)').html("Statistics for the Ellensburg district event are currently unavailable. Please check back later today.")
-				}
-			});
-			
-		</script>
 		<style type="text/css">
 			#comp {
 				height: 75px;
